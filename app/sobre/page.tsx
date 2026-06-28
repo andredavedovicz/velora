@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Sobre — Velora',
   description:
     'Conheça a Velora, empresa híbrida de tecnologia, dados e marketing digital em Balneário Camboriú.',
+  alternates: { canonical: '/sobre' },
 }
 
 const stats = [

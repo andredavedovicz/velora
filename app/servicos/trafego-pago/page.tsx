@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Tráfego Pago | Velora - Campanhas Segmentadas e Conversões',
   description: 'Campanhas segmentadas em Google Ads e redes sociais para gerar vendas rápidas. Gestão profissional de anúncios pagos.',
   keywords: 'tráfego pago, google ads, facebook ads, campanhas pagas, anúncios segmentados, ppc, remarketing, conversões',
+  alternates: { canonical: '/servicos/trafego-pago' },
 };
 
 export default function TrafegoPagoPage() {

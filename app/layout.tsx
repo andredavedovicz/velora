@@ -11,20 +11,51 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
+const SITE_URL = 'https://veloralabs.com.br'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://velora.com.br'),
-  title: 'Velora — Tecnologia, Dados e Marketing Digital',
+  metadataBase: new URL(SITE_URL),
+  title: 'Velora — Tecnologia, Dados e Marketing Digital em Balneário Camboriú',
   description:
-    'Empresa híbrida de tecnologia e marketing digital em Balneário Camboriú. Desenvolvimento de software, dashboards em Python com integração de dados, sites, aplicativos, tráfego pago, SEO e social media.',
+    'Empresa brasileira de tecnologia e marketing digital em Balneário Camboriú · SC. Desenvolvimento de software, dashboards em Python com integração de dados, sites, aplicativos, tráfego pago, SEO e social media. Atendimento em todo o Brasil.',
   keywords:
-    'software, dashboards python, integração de dados, business intelligence, marketing digital, tráfego pago, tráfego orgânico, social media, desenvolvimento de apps, sites, crescimento digital, Balneário Camboriú',
-  authors: [{ name: 'Velora' }],
+    'software Balneário Camboriú, agência de tecnologia Santa Catarina, dashboards python, integração de dados, business intelligence, marketing digital Balneário Camboriú, tráfego pago, tráfego orgânico, social media, desenvolvimento de apps, criação de sites SC, crescimento digital, Velora',
+  authors: [{ name: 'Velora', url: SITE_URL }],
+  creator: 'Velora',
+  publisher: 'Velora',
+  applicationName: 'Velora',
   openGraph: {
-    title: 'Velora — Tecnologia, Dados e Marketing Digital',
+    title: 'Velora — Tecnologia, Dados e Marketing Digital em Balneário Camboriú',
     description:
-      'Software sob medida, dashboards em Python com integração de dados e marketing orientado a resultado.',
+      'Software sob medida, dashboards em Python com integração de dados e marketing orientado a resultado. Empresa brasileira em Balneário Camboriú · SC.',
+    url: SITE_URL,
+    siteName: 'Velora',
     locale: 'pt_BR',
     type: 'website',
+    countryName: 'Brasil',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Velora — Tecnologia, Dados e Marketing Digital',
+    description:
+      'Empresa brasileira de tecnologia, dados e marketing digital em Balneário Camboriú · SC.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  other: {
+    'geo.region': 'BR-SC',
+    'geo.placename': 'Balneário Camboriú',
+    'geo.position': '-26.9926;-48.6356',
+    ICBM: '-26.9926, -48.6356',
   },
 }
 
@@ -55,9 +86,45 @@ export default function RootLayout({
     ],
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'Velora',
+    url: SITE_URL,
+    image: `${SITE_URL}/icon.svg`,
+    logo: `${SITE_URL}/icon.svg`,
+    description:
+      'Empresa brasileira de tecnologia, dados e marketing digital em Balneário Camboriú · SC. Desenvolvimento de software, dashboards em Python, sites, aplicativos, tráfego pago, SEO e social media.',
+    telephone: '+55-47-99724-9820',
+    email: 'contato@velora.com.br',
+    priceRange: '$$',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Balneário Camboriú',
+      addressRegion: 'SC',
+      addressCountry: 'BR',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -26.9926,
+      longitude: -48.6356,
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Brasil',
+    },
+    knowsLanguage: 'pt-BR',
+    slogan: 'Do código ao resultado.',
+  }
+
   return (
     <html lang="pt-BR" className={inter.variable}>
       <body className="font-sans antialiased bg-black">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <header className="fixed top-0 w-full z-50 glass-nav">
           <Navigation />
         </header>

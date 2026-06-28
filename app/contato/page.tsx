@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Contato — Velora',
   description:
     'Entre em contato com a Velora para desenvolvimento de software, dashboards em Python e marketing digital em Balneário Camboriú.',
+  alternates: { canonical: '/contato' },
 }
 
 const channels = [

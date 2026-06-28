@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Serviços — Software, Dados e Marketing Digital | Velora',
   description:
     'Serviços completos de desenvolvimento de software, dashboards em Python com integração de dados, marketing digital, tráfego pago, SEO e social media em Balneário Camboriú.',
+  alternates: { canonical: '/servicos' },
 }
 
 const services = [

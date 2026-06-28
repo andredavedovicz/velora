@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     'Desenvolvimento de software sob medida: sites, e-commerce, sistemas web, aplicativos mobile e automações. Tecnologia moderna para empresas que querem inovar.',
   keywords:
     'desenvolvimento de software, sites personalizados, e-commerce, sistemas web, aplicativos mobile, react, next.js, react native, apis, automações',
+  alternates: { canonical: '/servicos/software' },
 }
 
 const services = [

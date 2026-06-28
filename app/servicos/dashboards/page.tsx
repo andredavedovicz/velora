@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'Dashboards em Python com integração de dados. Painéis de BI em tempo real que conectam APIs, ERPs, planilhas e bancos de dados para decisões orientadas por dados.',
   keywords:
     'dashboards python, integração de dados, business intelligence, plotly, dash, streamlit, pandas, etl, bi, painéis em tempo real, análise de dados',
+  alternates: { canonical: '/servicos/dashboards' },
 }
 
 const dataFeatures = [

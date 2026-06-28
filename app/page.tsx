@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Velora — Construa, escale e acelere seu negócio digital',
   description:
     'Empresa híbrida de tecnologia e marketing digital em Balneário Camboriú. Desenvolvimento de software, dashboards em Python com integração de dados, sites, aplicativos, tráfego pago, SEO e social media.',
+  alternates: { canonical: '/' },
 }
 
 const stats = [

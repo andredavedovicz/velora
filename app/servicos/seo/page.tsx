@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'SEO & Tráfego Orgânico | Velora - Otimização para Motores de Busca',
   description: 'Otimização para motores de busca, aumento de visibilidade e autoridade digital. SEO técnico e de conteúdo para crescimento sustentável.',
   keywords: 'seo, tráfego orgânico, otimização, google, motores de busca, autoridade digital, link building, conteúdo otimizado',
+  alternates: { canonical: '/servicos/seo' },
 };
 
 export default function SeoPage() {
