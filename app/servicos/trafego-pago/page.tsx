@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
+import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
   title: 'Tráfego Pago | Velora - Campanhas Segmentadas e Conversões',
@@ -18,7 +21,9 @@ export default function TrafegoPagoPage() {
         "Shopping campaigns",
         "Otimização de qualidade"
       ],
-      icon: "🔍"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      )
     },
     {
       title: "Facebook & Instagram Ads",
@@ -30,7 +35,9 @@ export default function TrafegoPagoPage() {
         "Campanhas de conversão",
         "Pixel de conversão"
       ],
-      icon: "📱"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" />
+      )
     },
     {
       title: "LinkedIn Ads",
@@ -42,7 +49,9 @@ export default function TrafegoPagoPage() {
         "Campanhas de marca",
         "Analytics detalhados"
       ],
-      icon: "💼"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m12 0H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2zm-9 6h.01M12 12h5" />
+      )
     }
   ];
 
@@ -80,38 +89,41 @@ export default function TrafegoPagoPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="section-padding bg-black text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
-            Tráfego Pago
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Campanhas segmentadas em Google Ads e redes sociais para gerar vendas rápidas
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Performance"
+        title={<>Tráfego pago que gera <span className="text-gradient-accent">vendas</span></>}
+        description="Campanhas segmentadas em Google Ads e redes sociais, otimizadas para converter e escalar com ROI positivo."
+      >
+        <a href={getWhatsAppUrl('trafego-pago')} {...WHATSAPP_LINK_PROPS} className="btn-primary">Começar campanha</a>
+        <a href="/servicos" className="btn-secondary">Ver outros serviços</a>
+      </PageHero>
 
       {/* Platforms Grid */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {platforms.map((platform, index) => (
-              <div key={index} className="card-elegant p-8 text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-6xl mb-6">{platform.icon}</div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">{platform.title}</h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">{platform.description}</p>
-                <ul className="text-left space-y-2">
-                  {platform.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <svg className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Reveal key={index} delay={index * 90}>
+                <div className="card-elegant h-full p-8 group">
+                  <div className="icon-badge w-14 h-14 mb-6 group-hover:bg-gray-900 group-hover:text-white">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {platform.icon}
+                    </svg>
+                  </div>
+                  <h2 className="text-xl font-bold text-gray-900 mb-3">{platform.title}</h2>
+                  <p className="text-gray-600 leading-relaxed mb-6 text-sm">{platform.description}</p>
+                  <ul className="space-y-2.5">
+                    {platform.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-600 text-sm">
+                        <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -222,7 +234,8 @@ export default function TrafegoPagoPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
-              href="/contato" 
+              href={getWhatsAppUrl('trafego-pago')} 
+              {...WHATSAPP_LINK_PROPS}
               className="btn-primary group"
             >
               Começar Campanha

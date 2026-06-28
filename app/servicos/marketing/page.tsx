@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
+import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
   title: 'Marketing Digital & Growth | Velora - Estratégias de Crescimento Online',
@@ -18,7 +21,9 @@ export default function MarketingPage() {
         "Testes A/B e multivariados",
         "Métricas de crescimento"
       ],
-      icon: "🚀"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3v18h18M7 14l3-3 3 3 5-6" />
+      )
     },
     {
       title: "Inbound Marketing",
@@ -30,7 +35,9 @@ export default function MarketingPage() {
         "Landing pages otimizadas",
         "Nurturing de leads"
       ],
-      icon: "📈"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 13.414V19a1 1 0 01-.293.707l-2 2A1 1 0 0111 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+      )
     },
     {
       title: "Marketing Automation",
@@ -42,7 +49,9 @@ export default function MarketingPage() {
         "Scoring de leads",
         "Integração de sistemas"
       ],
-      icon: "⚡"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      )
     }
   ];
 
@@ -80,38 +89,41 @@ export default function MarketingPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="section-padding bg-black text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
-            Marketing Digital & Growth
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Ajudamos empresas a crescerem online com estratégias de marketing eficazes e data-driven
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Marketing & Growth"
+        title={<>Marketing digital que <span className="text-gradient-accent">vende</span></>}
+        description="Ajudamos empresas a crescerem online com estratégias data-driven, do topo do funil à conversão."
+      >
+        <a href={getWhatsAppUrl('marketing')} {...WHATSAPP_LINK_PROPS} className="btn-primary">Começar agora</a>
+        <a href="/servicos" className="btn-secondary">Ver outros serviços</a>
+      </PageHero>
 
       {/* Strategies Grid */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {strategies.map((strategy, index) => (
-              <div key={index} className="card-elegant p-8 text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-6xl mb-6">{strategy.icon}</div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">{strategy.title}</h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">{strategy.description}</p>
-                <ul className="text-left space-y-2">
-                  {strategy.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <svg className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Reveal key={index} delay={index * 90}>
+                <div className="card-elegant h-full p-8 group">
+                  <div className="icon-badge w-14 h-14 mb-6 group-hover:bg-gray-900 group-hover:text-white">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {strategy.icon}
+                    </svg>
+                  </div>
+                  <h2 className="text-xl font-bold text-gray-900 mb-3">{strategy.title}</h2>
+                  <p className="text-gray-600 leading-relaxed mb-6 text-sm">{strategy.description}</p>
+                  <ul className="space-y-2.5">
+                    {strategy.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-600 text-sm">
+                        <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -177,7 +189,8 @@ export default function MarketingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
-              href="/contato" 
+              href={getWhatsAppUrl('marketing')} 
+              {...WHATSAPP_LINK_PROPS}
               className="btn-primary group"
             >
               Começar Agora

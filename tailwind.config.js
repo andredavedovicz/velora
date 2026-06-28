@@ -7,9 +7,20 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       colors: {
+        accent: {
+          DEFAULT: '#2dd4bf',
+          50: '#f0fdfa',
+          100: '#ccfbf1',
+          400: '#2dd4bf',
+          500: '#14b8a6',
+          600: '#0d9488',
+        },
+        accent2: '#6366f1',
+        accent3: '#d856bf',
+        ink: '#0a0a0a',
         primary: {
           50: '#f8fafc',
           100: '#f1f5f9',
@@ -23,11 +34,20 @@ module.exports = {
           900: '#0f172a',
         },
       },
+      letterSpacing: {
+        tightest: '-0.04em',
+      },
+      borderRadius: {
+        '4xl': '2rem',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
       animation: {
-        'gradient-shift': 'gradientShift 20s ease infinite',
-        'particle-move': 'particleMove 30s linear infinite',
-        'float-1': 'float1 15s ease-in-out infinite',
-        'float-2': 'float2 20s ease-in-out infinite',
+        marquee: 'marquee 32s linear infinite',
       },
     },
   },

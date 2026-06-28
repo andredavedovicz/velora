@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
+import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
   title: 'SEO & Tráfego Orgânico | Velora - Otimização para Motores de Busca',
@@ -18,7 +21,9 @@ export default function SeoPage() {
         "Schema markup",
         "Core Web Vitals"
       ],
-      icon: "⚙️"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      )
     },
     {
       title: "SEO de Conteúdo",
@@ -30,7 +35,9 @@ export default function SeoPage() {
         "Estruturação de conteúdo",
         "Meta tags otimizadas"
       ],
-      icon: "📝"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      )
     },
     {
       title: "Link Building",
@@ -42,7 +49,9 @@ export default function SeoPage() {
         "Monitoramento de backlinks",
         "Recuperação de links tóxicos"
       ],
-      icon: "🔗"
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+      )
     }
   ];
 
@@ -103,38 +112,41 @@ export default function SeoPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="section-padding bg-black text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
-            SEO & Tráfego Orgânico
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Otimização para motores de busca, aumento de visibilidade e autoridade digital
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="SEO & Orgânico"
+        title={<>Apareça no Google de forma <span className="text-gradient-accent">sustentável</span></>}
+        description="Otimização para motores de busca, aumento de visibilidade e autoridade digital com resultados duradouros."
+      >
+        <a href={getWhatsAppUrl('seo')} {...WHATSAPP_LINK_PROPS} className="btn-primary">Auditoria gratuita</a>
+        <a href="/servicos" className="btn-secondary">Ver outros serviços</a>
+      </PageHero>
 
       {/* Services Grid */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="card-elegant p-8 text-center group hover:scale-105 transition-transform duration-300">
-                <div className="text-6xl mb-6">{service.icon}</div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">{service.description}</p>
-                <ul className="text-left space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                      <svg className="w-5 h-5 text-gray-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <Reveal key={index} delay={index * 90}>
+                <div className="card-elegant h-full p-8 group">
+                  <div className="icon-badge w-14 h-14 mb-6 group-hover:bg-gray-900 group-hover:text-white">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {service.icon}
+                    </svg>
+                  </div>
+                  <h2 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h2>
+                  <p className="text-gray-600 leading-relaxed mb-6 text-sm">{service.description}</p>
+                  <ul className="space-y-2.5">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-600 text-sm">
+                        <svg className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -226,7 +238,8 @@ export default function SeoPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
-              href="/contato" 
+              href={getWhatsAppUrl('seo')} 
+              {...WHATSAPP_LINK_PROPS}
               className="btn-primary group"
             >
               Auditoria Gratuita
