@@ -5,7 +5,7 @@ import TechMarquee from '@/components/TechMarquee'
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
-  title: 'Desenvolvimento de Software | Velora — Web, Mobile e Sistemas',
+  title: 'Desenvolvimento de Software | VeloraLabs — Web, Mobile e Sistemas',
   description:
     'Desenvolvimento de software sob medida: sites, e-commerce, sistemas web, aplicativos mobile e automações. Tecnologia moderna para empresas que querem inovar.',
   keywords:

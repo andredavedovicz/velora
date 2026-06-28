@@ -72,9 +72,10 @@ export default function Navigation() {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="group flex items-baseline gap-2.5">
-          <span className="text-2xl md:text-3xl font-bold">
+          <span className="text-2xl md:text-3xl font-bold tracking-tight">
             <span className="bg-gradient-to-br from-emerald-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent pr-[0.04em]">V</span>
-            <span className="text-white tracking-tight">elora</span>
+            <span className="text-white">elora</span>
+            <span className="bg-gradient-to-br from-cyan-400 to-blue-500 bg-clip-text text-transparent">Labs</span>
           </span>
           <span className="hidden lg:inline border-l border-white/15 pl-2.5 text-[11px] font-medium uppercase tracking-[0.16em] text-gray-500">
             Software · Dados · Marketing

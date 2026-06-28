@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal'
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
-  title: 'Dashboards & Dados em Python | Velora',
+  title: 'Dashboards & Dados em Python | VeloraLabs',
   description:
     'Dashboards em Python com integração de dados. Painéis de BI em tempo real que conectam APIs, ERPs, planilhas e bancos de dados para decisões orientadas por dados.',
   keywords:

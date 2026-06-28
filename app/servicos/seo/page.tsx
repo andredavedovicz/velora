@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal';
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
-  title: 'SEO & Tráfego Orgânico | Velora - Otimização para Motores de Busca',
+  title: 'SEO & Tráfego Orgânico | VeloraLabs - Otimização para Motores de Busca',
   description: 'Otimização para motores de busca, aumento de visibilidade e autoridade digital. SEO técnico e de conteúdo para crescimento sustentável.',
   keywords: 'seo, tráfego orgânico, otimização, google, motores de busca, autoridade digital, link building, conteúdo otimizado',
   alternates: { canonical: '/servicos/seo' },

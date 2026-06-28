@@ -27,7 +27,7 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = [
-      `Olá, Velora! Meu nome é ${form.name || "—"}.`,
+      `Olá, VeloraLabs! Meu nome é ${form.name || "—"}.`,
       form.company ? `Empresa: ${form.company}.` : "",
       `Tenho interesse em: ${form.service}.`,
       form.message ? `\nDetalhes: ${form.message}` : "",

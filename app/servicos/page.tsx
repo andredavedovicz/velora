@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal'
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
-  title: 'Serviços — Software, Dados e Marketing Digital | Velora',
+  title: 'Serviços — Software, Dados e Marketing Digital | VeloraLabs',
   description:
     'Serviços completos de desenvolvimento de software, dashboards em Python com integração de dados, marketing digital, tráfego pago, SEO e social media em Balneário Camboriú.',
   alternates: { canonical: '/servicos' },

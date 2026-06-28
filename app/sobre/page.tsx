@@ -4,9 +4,9 @@ import Reveal from '@/components/Reveal'
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
-  title: 'Sobre — Velora',
+  title: 'Sobre — VeloraLabs',
   description:
-    'Conheça a Velora, empresa híbrida de tecnologia, dados e marketing digital em Balneário Camboriú.',
+    'Conheça a VeloraLabs, empresa híbrida de tecnologia, dados e marketing digital em Balneário Camboriú.',
   alternates: { canonical: '/sobre' },
 }
 
@@ -44,7 +44,7 @@ export default function SobrePage() {
   return (
     <>
       <PageHero
-        eyebrow="Sobre a Velora"
+        eyebrow="Sobre a VeloraLabs"
         title={<>Tecnologia e marketing, <span className="text-gradient-accent">sob o mesmo teto</span></>}
         description="Somos uma empresa híbrida que combina desenvolvimento de software, dados e marketing digital para acelerar negócios."
       />
@@ -63,7 +63,7 @@ export default function SobrePage() {
             </Reveal>
             <Reveal delay={140}>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                A Velora nasceu da necessidade de oferecer soluções completas para empresas que
+                A VeloraLabs nasceu da necessidade de oferecer soluções completas para empresas que
                 querem crescer no digital. Unimos desenvolvimento de software e dados com
                 marketing digital para criar estratégias integradas que realmente funcionam.
               </p>

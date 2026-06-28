@@ -15,28 +15,28 @@ const SITE_URL = 'https://veloralabs.com.br'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Velora — Tecnologia, Dados e Marketing Digital em Balneário Camboriú',
+  title: 'VeloraLabs — Tecnologia, Dados e Marketing Digital em Balneário Camboriú',
   description:
     'Empresa brasileira de tecnologia e marketing digital em Balneário Camboriú · SC. Desenvolvimento de software, dashboards em Python com integração de dados, sites, aplicativos, tráfego pago, SEO e social media. Atendimento em todo o Brasil.',
   keywords:
-    'software Balneário Camboriú, agência de tecnologia Santa Catarina, dashboards python, integração de dados, business intelligence, marketing digital Balneário Camboriú, tráfego pago, tráfego orgânico, social media, desenvolvimento de apps, criação de sites SC, crescimento digital, Velora',
-  authors: [{ name: 'Velora', url: SITE_URL }],
-  creator: 'Velora',
-  publisher: 'Velora',
-  applicationName: 'Velora',
+    'VeloraLabs, Velora Labs, software Balneário Camboriú, agência de tecnologia Santa Catarina, dashboards python, integração de dados, business intelligence, marketing digital Balneário Camboriú, tráfego pago, tráfego orgânico, social media, desenvolvimento de apps, criação de sites SC, crescimento digital',
+  authors: [{ name: 'VeloraLabs', url: SITE_URL }],
+  creator: 'VeloraLabs',
+  publisher: 'VeloraLabs',
+  applicationName: 'VeloraLabs',
   openGraph: {
-    title: 'Velora — Tecnologia, Dados e Marketing Digital em Balneário Camboriú',
+    title: 'VeloraLabs — Tecnologia, Dados e Marketing Digital em Balneário Camboriú',
     description:
       'Software sob medida, dashboards em Python com integração de dados e marketing orientado a resultado. Empresa brasileira em Balneário Camboriú · SC.',
     url: SITE_URL,
-    siteName: 'Velora',
+    siteName: 'VeloraLabs',
     locale: 'pt_BR',
     type: 'website',
     countryName: 'Brasil',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Velora — Tecnologia, Dados e Marketing Digital',
+    title: 'VeloraLabs — Tecnologia, Dados e Marketing Digital',
     description:
       'Empresa brasileira de tecnologia, dados e marketing digital em Balneário Camboriú · SC.',
   },
@@ -90,14 +90,15 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${SITE_URL}/#organization`,
-    name: 'Velora',
+    name: 'VeloraLabs',
+    alternateName: 'Velora Labs',
     url: SITE_URL,
     image: `${SITE_URL}/icon.svg`,
     logo: `${SITE_URL}/icon.svg`,
     description:
       'Empresa brasileira de tecnologia, dados e marketing digital em Balneário Camboriú · SC. Desenvolvimento de software, dashboards em Python, sites, aplicativos, tráfego pago, SEO e social media.',
     telephone: '+55-47-99724-9820',
-    email: 'contato@velora.com.br',
+    email: 'contato@veloralabs.com.br',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
@@ -138,9 +139,10 @@ export default function RootLayout({
           <div className="container-wide relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-14 border-b border-white/10">
               <div className="md:col-span-5">
-                <a href="/" className="inline-block text-3xl font-bold">
+                <a href="/" className="inline-block text-3xl font-bold tracking-tight">
                   <span className="bg-gradient-to-br from-emerald-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent pr-[0.04em]">V</span>
-                  <span className="text-white tracking-tight">elora</span>
+                  <span className="text-white">elora</span>
+                  <span className="bg-gradient-to-br from-cyan-400 to-blue-500 bg-clip-text text-transparent">Labs</span>
                 </a>
                 <p className="text-gray-400 leading-relaxed mt-5 max-w-sm">
                   Empresa híbrida de tecnologia, dados e marketing digital. Construímos
@@ -212,7 +214,7 @@ export default function RootLayout({
             </div>
 
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-sm text-gray-500">
-              <p>&copy; {new Date().getFullYear()} Velora. Todos os direitos reservados.</p>
+              <p>&copy; {new Date().getFullYear()} VeloraLabs. Todos os direitos reservados.</p>
               <p className="flex items-center gap-2">
                 Construído com tecnologia de ponta
                 <span className="dot-accent" />

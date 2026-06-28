@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal';
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
-  title: 'Marketing Digital & Growth | Velora - Estratégias de Crescimento Online',
+  title: 'Marketing Digital & Growth | VeloraLabs - Estratégias de Crescimento Online',
   description: 'Ajudamos empresas a crescerem online com estratégias de marketing eficazes. Growth hacking, inbound marketing e otimização de conversões.',
   keywords: 'marketing digital, growth hacking, inbound marketing, estratégias de crescimento, conversão, lead generation, marketing automation',
   alternates: { canonical: '/servicos/marketing' },

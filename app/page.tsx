@@ -4,7 +4,7 @@ import Reveal from '../components/Reveal'
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
-  title: 'Velora — Construa, escale e acelere seu negócio digital',
+  title: 'VeloraLabs — Construa, escale e acelere seu negócio digital',
   description:
     'Empresa híbrida de tecnologia e marketing digital em Balneário Camboriú. Desenvolvimento de software, dashboards em Python com integração de dados, sites, aplicativos, tráfego pago, SEO e social media.',
   alternates: { canonical: '/' },
@@ -296,7 +296,7 @@ export default function HomePage() {
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <Reveal>
-              <h2 className="display text-4xl md:text-5xl text-black mb-5">Por que a Velora</h2>
+              <h2 className="display text-4xl md:text-5xl text-black mb-5">Por que a VeloraLabs</h2>
             </Reveal>
             <Reveal delay={80}>
               <p className="text-lg text-gray-600">

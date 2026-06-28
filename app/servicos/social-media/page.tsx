@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal';
 import { getWhatsAppUrl, WHATSAPP_LINK_PROPS } from '@/lib/whatsapp';
 
 export const metadata: Metadata = {
-  title: 'Social Media | Velora - Gestão de Redes Sociais e Engajamento',
+  title: 'Social Media | VeloraLabs - Gestão de Redes Sociais e Engajamento',
   description: 'Gestão de redes sociais, criação de conteúdo e engajamento com seu público. Estratégias para Instagram, Facebook, LinkedIn e mais.',
   keywords: 'social media, redes sociais, instagram, facebook, linkedin, gestão de redes, criação de conteúdo, engajamento, community management',
   alternates: { canonical: '/servicos/social-media' },

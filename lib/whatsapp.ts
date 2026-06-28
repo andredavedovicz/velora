@@ -14,25 +14,25 @@ export type WhatsAppContext =
 
 const MESSAGES: Record<WhatsAppContext, string> = {
   geral:
-    "Olá! Vim pelo site da Velora e gostaria de conversar com vocês.",
+    "Olá! Vim pelo site da VeloraLabs e gostaria de conversar com vocês.",
   "fale-conosco":
-    "Olá! Vim pelo site da Velora e gostaria de falar com a equipe.",
+    "Olá! Vim pelo site da VeloraLabs e gostaria de falar com a equipe.",
   "iniciar-projeto":
-    "Olá! Vim pelo site da Velora e quero iniciar um projeto. Podemos conversar?",
+    "Olá! Vim pelo site da VeloraLabs e quero iniciar um projeto. Podemos conversar?",
   orcamento:
-    "Olá! Vim pelo site da Velora e gostaria de solicitar um orçamento.",
+    "Olá! Vim pelo site da VeloraLabs e gostaria de solicitar um orçamento.",
   dashboard:
-    "Olá! Vim pelo site da Velora e tenho interesse em dashboards e análise de dados.",
+    "Olá! Vim pelo site da VeloraLabs e tenho interesse em dashboards e análise de dados.",
   software:
-    "Olá! Vim pelo site da Velora e quero saber mais sobre desenvolvimento de software.",
+    "Olá! Vim pelo site da VeloraLabs e quero saber mais sobre desenvolvimento de software.",
   marketing:
-    "Olá! Vim pelo site da Velora e quero saber mais sobre marketing digital.",
+    "Olá! Vim pelo site da VeloraLabs e quero saber mais sobre marketing digital.",
   "trafego-pago":
-    "Olá! Vim pelo site da Velora e gostaria de conversar sobre tráfego pago.",
+    "Olá! Vim pelo site da VeloraLabs e gostaria de conversar sobre tráfego pago.",
   seo:
-    "Olá! Vim pelo site da Velora e gostaria de solicitar uma auditoria de SEO.",
+    "Olá! Vim pelo site da VeloraLabs e gostaria de solicitar uma auditoria de SEO.",
   "social-media":
-    "Olá! Vim pelo site da Velora e tenho interesse na gestão de redes sociais.",
+    "Olá! Vim pelo site da VeloraLabs e tenho interesse na gestão de redes sociais.",
 };
 
 export function getWhatsAppUrl(context: WhatsAppContext = "geral"): string {

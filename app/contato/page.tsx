@@ -5,9 +5,9 @@ import ContactForm from '@/components/ContactForm'
 import { getWhatsAppUrl } from '@/lib/whatsapp'
 
 export const metadata: Metadata = {
-  title: 'Contato — Velora',
+  title: 'Contato — VeloraLabs',
   description:
-    'Entre em contato com a Velora para desenvolvimento de software, dashboards em Python e marketing digital em Balneário Camboriú.',
+    'Entre em contato com a VeloraLabs para desenvolvimento de software, dashboards em Python e marketing digital em Balneário Camboriú.',
   alternates: { canonical: '/contato' },
 }
 
@@ -23,8 +23,8 @@ const channels = [
   },
   {
     title: 'E-mail',
-    value: 'contato@velora.com.br',
-    href: 'mailto:contato@velora.com.br',
+    value: 'contato@veloralabs.com.br',
+    href: 'mailto:contato@veloralabs.com.br',
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     ),
